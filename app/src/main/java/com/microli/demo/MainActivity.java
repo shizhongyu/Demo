@@ -13,6 +13,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.microli.demo.clickevent.ClickActivity;
+import com.microli.demo.fragment.FragmentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,5 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         classes.add(new MainBean("事件分发", ClickActivity.class));
+        classes.add(new MainBean("阴影", ShadowActivity.class));
+        classes.add(new MainBean("Fragment", FragmentActivity.class));
     }
 }

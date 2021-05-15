@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".clickevent.ClickActivity"/>
+        <activity android:name=".ShadowActivity"/>
+        <activity android:name=".fragment.FragmentActivity"/>
     </application>
 
 </manifest>

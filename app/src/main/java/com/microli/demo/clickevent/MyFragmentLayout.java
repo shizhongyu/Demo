@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 public class MyFragmentLayout extends FrameLayout {
     private static final String TAG = "MyFragmentLayout";
     private boolean mLongPressTriggered;
-    private boolean clickHandleEvent;
 
     public MyFragmentLayout(@NonNull Context context) {
         super(context);
@@ -29,18 +28,15 @@ public class MyFragmentLayout extends FrameLayout {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        clickHandleEvent = true;
-        int  mask = ev.getActionMasked();
-        if(mask == MotionEvent.ACTION_DOWN) {
+        int mask = ev.getActionMasked();
+        if (mask == MotionEvent.ACTION_DOWN) {
             mLongPressTriggered = false;
         }
         boolean handle = super.dispatchTouchEvent(ev);
-        if(mask == MotionEvent.ACTION_DOWN) {
-            if(isLongClickable() && clickHandleEvent) {
-                scheduleLongPress();
-            }
+        if (mask == MotionEvent.ACTION_DOWN && isLongClickable()) {
+            scheduleLongPress();
         }
-        if(ev.getActionMasked() == MotionEvent.ACTION_UP
+        if (ev.getActionMasked() == MotionEvent.ACTION_UP
                 || ev.getActionMasked() == MotionEvent.ACTION_CANCEL) {
             removeLongPress();
         }
@@ -53,7 +49,6 @@ public class MyFragmentLayout extends FrameLayout {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        clickHandleEvent = false;
         if (mLongPressTriggered && event.getActionMasked() == MotionEvent.ACTION_UP) {
             return true;
         }
