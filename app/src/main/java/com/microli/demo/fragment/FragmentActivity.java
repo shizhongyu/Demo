@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.microli.demo.BaseActivity;
 import com.microli.demo.R;
+import com.microli.demo.databinding.ViewBindingBinding;
 
 public class FragmentActivity extends BaseActivity implements View.OnClickListener{
 

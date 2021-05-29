@@ -1,10 +1,22 @@
+//应用插件
 plugins {
     id 'com.android.application'
 }
 
+apply plugin: 'myplugin'
+
+router {
+    wikiDir getRootDir().absolutePath
+}
+
+//配置插件
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
+
+    viewBinding {
+        enabled = true
+    }
 
     defaultConfig {
         applicationId "com.microli.demo"
@@ -39,4 +51,20 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
     // https://mvnrepository.com/artifact/com.blankj/utilcode
     implementation group: 'com.blankj', name: 'utilcode', version: '1.9.3'
+}
+
+println("我是 主工程代码")
+
+apply from:project.rootProject.file("other.gradle")
+
+apply plugin: GreetingPlugin
+
+class GreetingPlugin implements Plugin<Project> {
+    void apply(Project project) {
+        project.task('hello') {
+            doLast {
+                println 'Hello from the GreetingPlugin'
+            }
+        }
+    }
 }

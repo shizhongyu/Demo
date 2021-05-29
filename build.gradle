@@ -5,6 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
+        //声明插件ID与版本号
         classpath "com.android.tools.build:gradle:4.1.3"
 
         // NOTE: Do not place your application dependencies here; they belong
