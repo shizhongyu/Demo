@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.microli.demo">
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <!--允许应用程序从外部存储读取。
+任何声明WRITE_EXTERNAL_STORAGE权限的应用程序都被隐式授予此权限。
+此权限从API级别19开始执行。在API级别19之前，此权限未强制执行，并且所有应用程序仍有权从外部存储读取。
+您可以使用运行Android 4.1或更高版本的设备上的“设置”应用的“开发人员”选项下的“启用保护USB存储”来强制执行测试。
+也从API级别19开始，不需要此权限来读取/写入由getExternalFilesDir（String）和getExternalCacheDir（）
+返回的特定于应用程序的目录中的文件。
+注意：如果您的minSdkVersion和targetSdkVersion值均设置为3或更低
+，则系统将隐式授予您的应用程序此权限。 如果您不需要此权限，请确保您的targetSdkVersion为4或更高。
+防护等级：危险 added in API level 16-->
+    <permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <!--允许应用程序写入外部存储。
+    注意：如果您的minSdkVersion和targetSdkVersion值均设置为3或更低，则系统会隐式授予您的应用此许可权。 如果您不需要此权限，
+    请确保您的targetSdkVersion为4或更高。从API级别19开始，不需要此权限来读取/写入由getExternalFilesDir（String）
+    和getExternalCacheDir（）返回的特定于应用程序的目录中的文件。
+    防护等级：危险 added in API level 4-->
+    <permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Demo">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -20,6 +42,7 @@
         <activity android:name=".ShadowActivity"/>
         <activity android:name=".fragment.FragmentActivity"/>
         <activity android:name=".AnimActivity"/>
+        <activity android:name=".WebViewActivity"/>
     </application>
 
 </manifest>

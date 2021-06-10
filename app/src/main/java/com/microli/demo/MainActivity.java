@@ -52,5 +52,6 @@ public class MainActivity extends AppCompatActivity {
         classes.add(new MainBean("阴影", ShadowActivity.class));
         classes.add(new MainBean("Fragment", FragmentActivity.class));
         classes.add(new MainBean("动画", AnimActivity.class));
+        classes.add(new MainBean("TextView url 拦截", WebViewActivity.class));
     }
 }
