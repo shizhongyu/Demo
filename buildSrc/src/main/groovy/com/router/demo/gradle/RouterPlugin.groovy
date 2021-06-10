@@ -10,10 +10,12 @@ class RouterPlugin implements Plugin<Project> {
     void apply(Project project) {
         println("我来自于 routerPlugin, apply from ${project.name}")
 
+
         project.getExtensions().create("router", RouterExtension)
 
         project.afterEvaluate {
             RouterExtension routerExtension = project["router"]
+
 
             println("用户设置的wiki路径:${routerExtension.wikiDir}")
         }
