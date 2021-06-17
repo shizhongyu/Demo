@@ -16,7 +16,9 @@ import com.microli.demo.databinding.ViewBindingBinding;
 
 public class FragmentActivity extends BaseActivity implements View.OnClickListener{
 
-    private static final String TAG = "FragmentActivity";
+    private static final String TAG = FragmentActivity.class.getCanonicalName();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,7 @@ public class FragmentActivity extends BaseActivity implements View.OnClickListen
         button.setOnClickListener(this);
         if (savedInstanceState == null) {
             replaceFragment(new LeftFragment());
+            FragmentActivity.class.getCanonicalName();
             Log.d(TAG, "onCreate() called with: savedInstanceState = [" + savedInstanceState + "]");
         }
     }
