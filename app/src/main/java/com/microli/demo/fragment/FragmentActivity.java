@@ -22,6 +22,9 @@ public class FragmentActivity extends BaseActivity implements View.OnClickListen
         Button button = (Button) findViewById(R.id.button);
         findViewById(R.id.button_1).setOnClickListener(this);
         button.setOnClickListener(this);
+        if (savedInstanceState == null) {
+            replaceFragment(new LeftFragment());
+        }
     }
 
     @Override
