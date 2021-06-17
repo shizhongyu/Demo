@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.microli.demo">
+
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <!--允许应用程序从外部存储读取。
 任何声明WRITE_EXTERNAL_STORAGE权限的应用程序都被隐式授予此权限。
@@ -20,17 +21,18 @@
     防护等级：危险 added in API level 4-->
     <permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Demo">
+        android:theme="@style/Theme.Demo"
+        android:usesCleartextTraffic="true">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,12 +40,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".clickevent.ClickActivity"/>
-        <activity android:name=".ShadowActivity"/>
-        <activity android:name=".fragment.FragmentActivity"/>
-        <activity android:name=".AnimActivity"/>
-        <activity android:name=".WebViewActivity"/>
-        <activity android:name=".LargeViewBoundsActivity"/>
+        <activity android:name=".clickevent.ClickActivity" />
+        <activity android:name=".ShadowActivity" />
+        <activity
+            android:name=".fragment.FragmentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".AnimActivity" />
+        <activity android:name=".WebViewActivity" />
+        <activity android:name=".LargeViewBoundsActivity" />
     </application>
 
 </manifest>

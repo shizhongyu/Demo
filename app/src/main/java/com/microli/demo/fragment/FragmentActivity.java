@@ -1,6 +1,7 @@
 package com.microli.demo.fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,6 +16,7 @@ import com.microli.demo.databinding.ViewBindingBinding;
 
 public class FragmentActivity extends BaseActivity implements View.OnClickListener{
 
+    private static final String TAG = "FragmentActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,7 @@ public class FragmentActivity extends BaseActivity implements View.OnClickListen
         button.setOnClickListener(this);
         if (savedInstanceState == null) {
             replaceFragment(new LeftFragment());
+            Log.d(TAG, "onCreate() called with: savedInstanceState = [" + savedInstanceState + "]");
         }
     }
 
@@ -48,4 +51,9 @@ public class FragmentActivity extends BaseActivity implements View.OnClickListen
         transaction.commitNowAllowingStateLoss();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy() called");
+    }
 }
