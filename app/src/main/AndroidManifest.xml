@@ -44,10 +44,11 @@
         <activity android:name=".ShadowActivity" />
         <activity
             android:name=".fragment.FragmentActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+             />
         <activity android:name=".AnimActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".LargeViewBoundsActivity" />
+        <activity android:name=".ViewActivity"/>
     </application>
 
 </manifest>

@@ -54,5 +54,6 @@ public class MainActivity extends AppCompatActivity {
         classes.add(new MainBean("动画", AnimActivity.class));
         classes.add(new MainBean("TextView url 拦截", WebViewActivity.class));
         classes.add(new MainBean("扩大点击区域", LargeViewBoundsActivity.class));
+        classes.add(new MainBean("View", ViewActivity.class));
     }
 }
