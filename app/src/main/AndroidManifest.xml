@@ -50,6 +50,7 @@
         <activity android:name=".LargeViewBoundsActivity" />
         <activity android:name=".ViewActivity"/>
         <activity android:name=".ANRActivity"/>
+        <activity android:name=".HookActivity"/>
     </application>
 
 </manifest>
