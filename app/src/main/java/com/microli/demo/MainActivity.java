@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        classes.add(new MainBean("constraintlayout", ConstraintlayoutActivity.class));
         classes.add(new MainBean("事件分发", ClickActivity.class));
         classes.add(new MainBean("阴影", ShadowActivity.class));
         classes.add(new MainBean("Fragment", FragmentActivity.class));
@@ -57,6 +58,5 @@ public class MainActivity extends AppCompatActivity {
         classes.add(new MainBean("View", ViewActivity.class));
         classes.add(new MainBean("ANR", ANRActivity.class));
         classes.add(new MainBean("HookActivity", HookActivity.class));
-        classes.add(new MainBean("constraintlayout", ConstraintlayoutActivity.class));
     }
 }
