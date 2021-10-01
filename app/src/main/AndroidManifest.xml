@@ -51,6 +51,7 @@
         <activity android:name=".ViewActivity"/>
         <activity android:name=".ANRActivity"/>
         <activity android:name=".HookActivity"/>
+        <activity android:name=".ConstraintlayoutActivity"/>
     </application>
 
 </manifest>

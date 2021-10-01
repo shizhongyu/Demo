@@ -57,5 +57,6 @@ public class MainActivity extends AppCompatActivity {
         classes.add(new MainBean("View", ViewActivity.class));
         classes.add(new MainBean("ANR", ANRActivity.class));
         classes.add(new MainBean("HookActivity", HookActivity.class));
+        classes.add(new MainBean("constraintlayout", ConstraintlayoutActivity.class));
     }
 }
