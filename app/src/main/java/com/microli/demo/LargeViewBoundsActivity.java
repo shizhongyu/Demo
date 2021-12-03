@@ -1,16 +1,22 @@
 package com.microli.demo;
 
 import android.graphics.Rect;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.TouchDelegate;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
+
+import com.bumptech.glide.Glide;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 public class LargeViewBoundsActivity extends BaseActivity {
 
     private Button mBtn;
+    private SimpleDraweeView mImageview;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -53,5 +59,9 @@ public class LargeViewBoundsActivity extends BaseActivity {
 
     private void initView() {
         mBtn = (Button) findViewById(R.id.btn);
+        mImageview = findViewById(R.id.imageview);
+        Uri uri = Uri.parse("http://puui.qpic.cn/qqvideo_ori/0/w00400y30sh_496_280/0");
+        mImageview.setImageURI(uri);
+
     }
 }

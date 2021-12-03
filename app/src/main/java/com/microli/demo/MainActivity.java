@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
+import com.microli.demo.clickevent.Click01Activity;
 import com.microli.demo.clickevent.ClickActivity;
 import com.microli.demo.fragment.FragmentActivity;
 
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        classes.add(new MainBean("SeekBar", SeekBarActivity.class));
+        classes.add(new MainBean("click", Click01Activity.class));
         classes.add(new MainBean("constraintlayout", ConstraintlayoutActivity.class));
         classes.add(new MainBean("事件分发", ClickActivity.class));
         classes.add(new MainBean("阴影", ShadowActivity.class));
