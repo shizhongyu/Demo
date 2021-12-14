@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.microli.demo.view.RootView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.microli.demo.view.MyTvView
+        android:id="@+id/tv_01"
+        android:background="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <com.microli.demo.view.View02
+        android:id="@+id/view01"
+        android:background="@color/red"
+        android:layout_marginTop="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+
+</com.microli.demo.view.RootView>
