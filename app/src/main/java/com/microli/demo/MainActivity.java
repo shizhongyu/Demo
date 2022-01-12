@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        classes.add(new MainBean("列表Glide", GlideListActivity.class));
         classes.add(new MainBean("事件分发", Click02Activity.class));
         classes.add(new MainBean("SeekBar", SeekBarActivity.class));
         classes.add(new MainBean("click", Click01Activity.class));

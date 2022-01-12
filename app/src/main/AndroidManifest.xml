@@ -56,6 +56,7 @@
         <activity android:name=".SeekBarActivity"/>
         <activity android:name=".clickevent.Click01Activity"/>
         <activity android:name=".clickevent.Click02Activity"/>
+        <activity android:name=".GlideListActivity"/>
     </application>
 
 </manifest>
