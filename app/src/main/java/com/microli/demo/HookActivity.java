@@ -13,6 +13,9 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
+import okhttp3.OkHttpClient;
+import okhttp3.internal.http.RetryAndFollowUpInterceptor;
+
 public class HookActivity extends BaseActivity {
     private Button view;
 

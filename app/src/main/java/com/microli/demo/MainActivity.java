@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.toolbox.Volley;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         mRecyclerview.setLayoutManager(linearLayoutManager);
+
         mRecyclerview.setAdapter(mainAdapter);
         mainAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
@@ -50,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        classes.add(new MainBean("apt", APTActivity.class));
         classes.add(new MainBean("列表Glide", GlideListActivity.class));
         classes.add(new MainBean("事件分发", Click02Activity.class));
         classes.add(new MainBean("SeekBar", SeekBarActivity.class));

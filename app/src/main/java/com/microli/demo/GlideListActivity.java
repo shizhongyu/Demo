@@ -1,6 +1,7 @@
 package com.microli.demo;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
+import com.microli.demo.view.MyImageView;
+import com.microli.demo.view.MyRecyclerview;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +25,7 @@ import java.util.List;
  * 2022/1/12
  */
 public class GlideListActivity extends BaseActivity {
-    private RecyclerView mRecyclerview;
+    private MyRecyclerview mRecyclerview;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,7 +35,7 @@ public class GlideListActivity extends BaseActivity {
     }
 
     private void initView() {
-        mRecyclerview = (RecyclerView) findViewById(R.id.recyclerview);
+        mRecyclerview = (MyRecyclerview) findViewById(R.id.recyclerview);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         mRecyclerview.setLayoutManager(linearLayoutManager);
@@ -84,7 +87,13 @@ public class GlideListActivity extends BaseActivity {
          */
         @Override
         protected void convert( BaseViewHolder helper,  String item) {
-            ImageView imageView = helper.itemView.findViewById(R.id.image);
+            MyImageView imageView = helper.itemView.findViewById(R.id.image);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
 //            ViewTarget viewTarget = new ViewTarget(imageView) {
 //                @Override
 //                public void onResourceReady(@NonNull Object resource, @Nullable Transition transition) {
