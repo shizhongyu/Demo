@@ -9,10 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.volley.Request;
-import com.android.volley.toolbox.Volley;
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.microli.demo.clickevent.Click01Activity;
 import com.microli.demo.clickevent.Click02Activity;
@@ -53,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        classes.add(new MainBean("okhttp", OkhttpActivity.class));
         classes.add(new MainBean("apt", APTActivity.class));
         classes.add(new MainBean("列表Glide", GlideListActivity.class));
         classes.add(new MainBean("事件分发", Click02Activity.class));

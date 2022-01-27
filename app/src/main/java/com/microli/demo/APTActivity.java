@@ -29,7 +29,7 @@ public class APTActivity extends BaseActivity{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+          super.onCreate(savedInstanceState);
         setContentView(R.layout.apt_ac);
         ButterKnife.bind(this);
         name.setText(this.getLocalClassName());

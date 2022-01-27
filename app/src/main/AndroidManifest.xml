@@ -58,6 +58,7 @@
         <activity android:name=".clickevent.Click02Activity"/>
         <activity android:name=".GlideListActivity"/>
         <activity android:name=".APTActivity"/>
+        <activity android:name=".OkhttpActivity"/>
     </application>
 
 </manifest>
