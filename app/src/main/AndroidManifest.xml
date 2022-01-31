@@ -59,6 +59,7 @@
         <activity android:name=".GlideListActivity"/>
         <activity android:name=".APTActivity"/>
         <activity android:name=".OkhttpActivity"/>
+        <activity android:name=".EventbusActivity"/>
     </application>
 
 </manifest>
