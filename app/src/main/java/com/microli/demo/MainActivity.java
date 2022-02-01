@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        classes.add(new MainBean("Dagger2", Dagger2Activity.class));
         classes.add(new MainBean("EventBus", EventbusActivity.class));
         classes.add(new MainBean("okhttp", OkhttpActivity.class));
         classes.add(new MainBean("apt", APTActivity.class));
