@@ -62,6 +62,7 @@
         <activity android:name=".EventbusActivity"/>
         <activity android:name=".Dagger2Activity"/>
         <activity android:name=".RxActivity"/>
+        <activity android:name=".LifeCycleActivity"/>
     </application>
 
 </manifest>
