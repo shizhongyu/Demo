@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        classes.add(new MainBean("DataBinding", DataBindingActivity.class));
         classes.add(new MainBean("LiveData", LiveDataActivity.class));
         classes.add(new MainBean("ViewModel", ViewModelActivity.class));
         classes.add(new MainBean("LifeCycle", LifeCycleActivity.class));

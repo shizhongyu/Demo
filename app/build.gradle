@@ -18,6 +18,9 @@ android {
         enabled = true
     }
 
+    dataBinding{
+        enabled true
+    }
     defaultConfig {
         applicationId "com.microli.demo"
         minSdkVersion 16

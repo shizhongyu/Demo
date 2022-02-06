@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.microli.demo.R" />
+
+        <variable
+            name="user"
+            type="com.microli.demo.databingding.ObservableField" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="onLike"
+            android:layout_marginTop="100dp"
+            android:text="@{user.name}" />
+
+        <ProgressBar
+            android:id="@+id/likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="10"
+            android:progress="@{user.likes}"
+            android:layout_marginBottom="100dp" />
+
+    </FrameLayout>
+</layout>
