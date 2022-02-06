@@ -63,6 +63,7 @@
         <activity android:name=".Dagger2Activity"/>
         <activity android:name=".RxActivity"/>
         <activity android:name=".LifeCycleActivity"/>
+        <activity android:name=".ViewModelActivity"/>
     </application>
 
 </manifest>
