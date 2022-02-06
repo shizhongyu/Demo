@@ -64,6 +64,7 @@
         <activity android:name=".RxActivity"/>
         <activity android:name=".LifeCycleActivity"/>
         <activity android:name=".ViewModelActivity"/>
+        <activity android:name=".LiveDataActivity"/>
     </application>
 
 </manifest>
