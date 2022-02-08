@@ -66,6 +66,7 @@
         <activity android:name=".ViewModelActivity"/>
         <activity android:name=".LiveDataActivity"/>
         <activity android:name=".DataBindingActivity"/>
+        <activity android:name=".SharedPreferencesActivity"/>
     </application>
 
 </manifest>
