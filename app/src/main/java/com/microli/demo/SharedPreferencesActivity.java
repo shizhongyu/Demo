@@ -25,7 +25,6 @@ public class SharedPreferencesActivity extends BaseActivity{
 
     private void putValue() {
         SharedPreferences sharedPreferences = getSharedPreferences("gityuan", Context.MODE_PRIVATE);
-
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("blog", "www.gityuan.com");
         editor.putInt("years", 3);

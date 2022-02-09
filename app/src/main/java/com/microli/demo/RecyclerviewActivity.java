@@ -1,16 +1,11 @@
 package com.microli.demo;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.microli.demo.clickevent.Click01Activity;
 import com.microli.demo.clickevent.Click02Activity;
 import com.microli.demo.clickevent.ClickActivity;
@@ -19,34 +14,34 @@ import com.microli.demo.fragment.FragmentActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Copyright (c) 2021 Tencent. All rights reserved.
+ * 类功能描述:
+ *
+ * @Author microli
+ * 2022/2/9
+ */
+public class RecyclerviewActivity extends BaseActivity {
 
-    List<MainBean> classes = new ArrayList<>();
-    MainAdapter mainAdapter = new MainAdapter(R.layout.main_item, classes);
     private RecyclerView mRecyclerview;
+    List<MainBean> classes = new ArrayList<>();
+    RecyclerviewAdapter mainAdapter = new RecyclerviewAdapter(classes);
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        initData();
+        setContentView(R.layout.recyclerview_ac);
         initView();
+        initData();
+        initData();
+        GridLayoutManager linearLayoutManager = new GridLayoutManager(this, 5);
+        mRecyclerview.setLayoutManager(linearLayoutManager);
+        mRecyclerview.setItemViewCacheSize(6);
+        mRecyclerview.setAdapter(mainAdapter);
     }
 
     private void initView() {
-        mRecyclerview = findViewById(R.id.recyclerview);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
-        mRecyclerview.setLayoutManager(linearLayoutManager);
-
-        mRecyclerview.setAdapter(mainAdapter);
-        mainAdapter.setOnItemClickListener(new OnItemClickListener() {
-            @Override
-            public void onItemClick(@NonNull BaseQuickAdapter<?, ?> adapter, @NonNull View view, int position) {
-                Intent intent = new Intent(MainActivity.this, classes.get(position).className);
-                startActivity(intent);
-            }
-        });
+        mRecyclerview = (RecyclerView) findViewById(R.id.recyclerview);
     }
 
     private void initData() {

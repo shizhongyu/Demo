@@ -21,7 +21,10 @@
         <entry key="app/src/main/res/layout/life_cycle.xml" value="0.25379939209726443" />
         <entry key="app/src/main/res/layout/list_layout.xml" value="0.1" />
         <entry key="app/src/main/res/layout/live_data.xml" value="0.25379939209726443" />
+        <entry key="app/src/main/res/layout/main_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/ok_ac.xml" value="0.15534420289855072" />
+        <entry key="app/src/main/res/layout/recyclerview_ac.xml" value="0.24682971014492755" />
+        <entry key="app/src/main/res/layout/recyclerview_item_height.xml" value="0.24682971014492755" />
         <entry key="app/src/main/res/layout/retrofit_ac.xml" value="0.1828774062816616" />
         <entry key="app/src/main/res/layout/rx_ac.xml" value="0.24682971014492755" />
         <entry key="app/src/main/res/layout/seekbar_ac.xml" value="0.1" />

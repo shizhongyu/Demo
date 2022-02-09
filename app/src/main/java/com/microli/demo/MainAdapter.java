@@ -1,7 +1,5 @@
 package com.microli.demo;
 
-import android.content.Intent;
-
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 
