@@ -1,7 +1,9 @@
 package com.microli.demo;
 
+import android.os.Bundle;
 import android.util.Log;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.greenrobot.eventbus.EventBus;
@@ -15,6 +17,12 @@ public class BaseActivity extends AppCompatActivity {
     public void onMessageEvent(MessageEvent event) {
         // Do something
         Log.d(TAG, "onMessageEvent() called with: event = [" + event + "]" + getClass().toString());
+    }
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setTitle(getLocalClassName());
     }
 
     @Override

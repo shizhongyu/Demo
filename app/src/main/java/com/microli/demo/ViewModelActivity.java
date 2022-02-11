@@ -29,7 +29,7 @@ public class ViewModelActivity extends BaseActivity{
         });
     }
 
-    public class MyViewModel extends ViewModel {
+    public static class MyViewModel extends ViewModel {
         private MutableLiveData<List<User>> users;
 
         public LiveData<List<User>> getUsers() {

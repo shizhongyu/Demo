@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        classes.add(new MainBean("Arouter", ArouterActivity.class));
         classes.add(new MainBean("Recyclerview缓存", RecyclerviewActivity.class));
         classes.add(new MainBean("SharedPreferences", SharedPreferencesActivity.class));
         classes.add(new MainBean("DataBinding", DataBindingActivity.class));

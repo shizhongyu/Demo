@@ -27,7 +27,6 @@ public class LiveDataActivity extends BaseActivity {
         setContentView(R.layout.live_data);
         initView();
         // Other code to setup the activity...
-
         // Get the ViewModel.
         model = new ViewModelProvider(this).get(NameViewModel.class);
 
@@ -42,14 +41,14 @@ public class LiveDataActivity extends BaseActivity {
 
         // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
         model.getCurrentName().observe(this, nameObserver);
-        initView();
+        model.getCurrentName().setValue(getLocalClassName());
     }
 
     private void initView() {
         mText = (TextView) findViewById(R.id.text);
     }
 
-    public class NameViewModel extends ViewModel {
+    public static class NameViewModel extends ViewModel {
 
         // Create a LiveData with a String
         private MutableLiveData<String> currentName;
