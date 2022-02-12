@@ -70,6 +70,7 @@
         <activity android:name=".RecyclerviewActivity"/>
         <activity android:name=".ArouterActivity"/>
         <activity android:name=".ArouterTestActivity"/>
+        <activity android:name=".GsonActivity"/>
     </application>
 
 </manifest>
