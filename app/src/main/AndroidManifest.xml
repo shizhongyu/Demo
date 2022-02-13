@@ -43,9 +43,7 @@
         </activity>
         <activity android:name=".clickevent.ClickActivity" />
         <activity android:name=".ShadowActivity" />
-        <activity
-            android:name=".fragment.FragmentActivity"
-             />
+        <activity android:name=".fragment.FragmentActivity" />
         <activity android:name=".AnimActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".LargeViewBoundsActivity" />
@@ -71,6 +69,7 @@
         <activity android:name=".ArouterActivity"/>
         <activity android:name=".ArouterTestActivity"/>
         <activity android:name=".GsonActivity"/>
+        <activity android:name=".FoldTextViewActivity"/>
     </application>
 
 </manifest>
