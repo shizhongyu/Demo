@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        classes.add(new MainBean("折叠TextView", FoldTextViewActivity.class));
         classes.add(new MainBean("Gson", GsonActivity.class));
         classes.add(new MainBean("Arouter", ArouterActivity.class));
         classes.add(new MainBean("Recyclerview缓存", RecyclerviewActivity.class));
