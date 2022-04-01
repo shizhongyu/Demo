@@ -70,6 +70,8 @@
         <activity android:name=".ArouterTestActivity"/>
         <activity android:name=".GsonActivity"/>
         <activity android:name=".FoldTextViewActivity"/>
+        <activity android:name=".MeasureActivity"/>
+        <activity android:name=".ActivityFinish"/>
     </application>
 
 </manifest>
