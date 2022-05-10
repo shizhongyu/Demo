@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        classes.add(new MainBean("animation", AnimationActivity.class));
         classes.add(new MainBean("XML", XMLActivity.class));
         classes.add(new MainBean("Activity", ActivityFinish.class));
         classes.add(new MainBean("测量", MeasureActivity.class));

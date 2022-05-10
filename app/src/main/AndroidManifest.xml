@@ -73,6 +73,7 @@
         <activity android:name=".MeasureActivity"/>
         <activity android:name=".ActivityFinish"/>
         <activity android:name=".XMLActivity"/>
+        <activity android:name=".AnimationActivity"/>
     </application>
 
 </manifest>
