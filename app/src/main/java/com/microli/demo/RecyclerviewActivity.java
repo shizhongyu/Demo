@@ -47,7 +47,9 @@ public class RecyclerviewActivity extends BaseActivity {
         mRecyclerview.setLayoutManager(linearLayoutManager);
         mRecyclerview.setItemViewCacheSize(6);
         mRecyclerview.setAdapter(mainAdapter);
-//        mRecyclerview.setItemAnimator(new FadeInAnimator());
+        FadeInAnimator fadeInAnimator = new FadeInAnimator();
+        fadeInAnimator.setAddDuration(30000);
+        mRecyclerview.setItemAnimator(fadeInAnimator);
     }
 
     private void initView() {
