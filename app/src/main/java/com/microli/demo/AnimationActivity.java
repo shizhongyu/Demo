@@ -2,6 +2,7 @@ package com.microli.demo;
 
 import android.os.Bundle;
 import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 
@@ -29,14 +30,26 @@ public class AnimationActivity extends BaseActivity {
         mBtn = (Button) findViewById(R.id.btn);
         mBtnClick = (Button) findViewById(R.id.btn_click);
         mBtnClick.setOnClickListener(v -> {
-            //缩放动画
-            ScaleAnimation animation = new ScaleAnimation(1,1.2f,1,1);
-            animation.setDuration(100);
-            animation.setFillAfter(true);
-            animation.setRepeatMode(Animation.REVERSE);
-            animation.setRepeatCount(1);
-            mBtn.startAnimation(animation);
-
+//            scaleAnim();
+            rotationAnim();
         });
+    }
+
+    private void scaleAnim() {
+        //缩放动画
+        ScaleAnimation animation = new ScaleAnimation(1,1.2f,1,1);
+        animation.setDuration(100);
+        animation.setFillAfter(true);
+        animation.setRepeatMode(Animation.REVERSE);
+        animation.setRepeatCount(1);
+        mBtn.startAnimation(animation);
+    }
+
+    private void rotationAnim() {
+        RotateAnimation animation = new RotateAnimation(0,180f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+        animation.setDuration(5000);
+        animation.setFillAfter(true);
+        animation.setRepeatMode(Animation.RESTART);
+        mBtn.startAnimation(animation);
     }
 }
