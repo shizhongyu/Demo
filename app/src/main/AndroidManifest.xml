@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.microli.demo">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <!--允许应用程序从外部存储读取。
 任何声明WRITE_EXTERNAL_STORAGE权限的应用程序都被隐式授予此权限。
@@ -74,6 +75,7 @@
         <activity android:name=".ActivityFinish"/>
         <activity android:name=".XMLActivity"/>
         <activity android:name=".AnimationActivity"/>
+        <activity android:name=".RelativeLayoutActivity"/>
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.microli.demo;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -25,9 +26,11 @@ public class ArouterActivity extends BaseActivity {
     }
 
     public void onClick(View view) {
-        ARouter.getInstance().build("/test/ArouterTestActivity")
+        Object object = ARouter.getInstance().build("/test/ArouterTestActivity")
                 .withLong("key1", 666L)
                 .withString("key3", "888")
                 .navigation();
+//        ToastUtils.showLong(this, object.toString());
+        Log.d(TAG, "onClick() called with: view = ["  + "]" + object);
     }
 }
