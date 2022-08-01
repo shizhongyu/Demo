@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
+        classes.add(new MainBean("Bitmap", BitmapActivity.class));
         classes.add(new MainBean("RelativeLayout", RelativeLayoutActivity.class));
         classes.add(new MainBean("animation", AnimationActivity.class));
         classes.add(new MainBean("XML", XMLActivity.class));

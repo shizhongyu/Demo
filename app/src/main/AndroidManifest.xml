@@ -76,6 +76,7 @@
         <activity android:name=".XMLActivity"/>
         <activity android:name=".AnimationActivity"/>
         <activity android:name=".RelativeLayoutActivity"/>
+        <activity android:name=".BitmapActivity"/>
     </application>
 
 </manifest>
